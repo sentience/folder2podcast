@@ -3,7 +3,7 @@ require 'sinatra'
 hostname = `ifconfig`.split("\n").grep(/broadcast/).first.gsub(/.*inet (\d+\.\d+\.\d+\.\d+).*/, '\1') + ":4567"
 
 get '/' do
-  feed = "http://#{hostname}/feed?d=/Users/johndoe/Downloads/"
+  feed = "http://#{hostname}/feed?d=/Users/richard/Downloads/"
   "Visit <a href='#{feed}'>#{feed}</a> in your podcatcher!"
 end
 
